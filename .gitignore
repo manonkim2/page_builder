@@ -18,3 +18,8 @@
 **/dist/*
 # root에 있는 dist
 dist
+
+# nx
+.nx
+.nx/cache
+.nx/workspace-data

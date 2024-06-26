@@ -1,32 +1,32 @@
 {
   "run": {
-    "command": "nx build test",
-    "startTime": "2024-06-26T09:59:35.889Z",
-    "endTime": "2024-06-26T09:59:48.620Z",
+    "command": "nx build @manon/themes",
+    "startTime": "2024-06-26T11:05:24.791Z",
+    "endTime": "2024-06-26T11:05:28.837Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "themes:build",
+      "taskId": "@manon/esbuild-config:build",
       "target": "build",
-      "projectName": "themes",
-      "hash": "4427020526148410169",
-      "startTime": "2024-06-26T09:59:35.894Z",
-      "endTime": "2024-06-26T09:59:40.429Z",
+      "projectName": "@manon/esbuild-config",
+      "hash": "9005702926168655971",
+      "startTime": "2024-06-26T11:05:24.796Z",
+      "endTime": "2024-06-26T11:05:25.550Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
     },
     {
-      "taskId": "test:build",
+      "taskId": "@manon/themes:build",
       "target": "build",
-      "projectName": "test",
-      "hash": "14281890045804857860",
-      "startTime": "2024-06-26T09:59:40.430Z",
-      "endTime": "2024-06-26T09:59:48.620Z",
+      "projectName": "@manon/themes",
+      "hash": "15250185842024333976",
+      "startTime": "2024-06-26T11:05:25.550Z",
+      "endTime": "2024-06-26T11:05:28.837Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 1
+      "status": 0
     }
   ]
 }
