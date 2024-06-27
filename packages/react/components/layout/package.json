@@ -32,5 +32,9 @@
   "peerDependencies": {
     "@manon/themes": "workspace:^",
     "react": "*"
+  },
+  "dependencies": {
+    "@vanilla-extract/sprinkles": "^1.6.2",
+    "clsx": "^2.1.1"
   }
 }

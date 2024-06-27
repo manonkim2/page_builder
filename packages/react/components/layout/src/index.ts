@@ -1,1 +1,2 @@
-export { Block } from "./Block";
+export { Box } from "./Box";
+export { BoxProps } from "./Box/types";
