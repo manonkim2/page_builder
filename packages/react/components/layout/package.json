@@ -14,8 +14,9 @@
   "scripts": {
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
     "build:js": "node build.js",
-    "build:type": "tsc --emitDeclarationOnly",
-    "clean": "rm -rf dist"
+    "build:type": "yarn tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist",
+    "dev": "yarn build:js --watch && yarn build:type --watch"
   },
   "devDependencies": {
     "@manon/esbuild-config": "workspace:^",
