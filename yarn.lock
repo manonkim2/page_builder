@@ -2349,6 +2349,8 @@ __metadata:
     "@storybook/react-vite": "npm:^8.1.11"
     "@storybook/test": "npm:^8.1.11"
     prop-types: "npm:^15.8.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
     storybook: "npm:^8.1.11"
     vite: "npm:^5.3.1"
   languageName: unknown
@@ -7256,9 +7258,9 @@ __metadata:
   linkType: hard
 
 "flow-parser@npm:0.*":
-  version: 0.238.2
-  resolution: "flow-parser@npm:0.238.2"
-  checksum: 10c0/1e474018307e17123a65c1c098b50c5c8cc7ebb6eda1a1b84f8a6958839fd4aed29b174b6b6b970fc24009f763c68ca09cfc7ac847291d97f03ffecd0a6f1921
+  version: 0.238.3
+  resolution: "flow-parser@npm:0.238.3"
+  checksum: 10c0/29169c2b17fb55e42f3533b79f68a0258287e730e107dab5abb3a7888e477cec3c515516bb58c08f5c059e131792f2872e2e80b66482e178de7c373b7e333b25
   languageName: node
   linkType: hard
 
@@ -9429,17 +9431,18 @@ __metadata:
   linkType: hard
 
 "nypm@npm:^0.3.8":
-  version: 0.3.8
-  resolution: "nypm@npm:0.3.8"
+  version: 0.3.9
+  resolution: "nypm@npm:0.3.9"
   dependencies:
     citty: "npm:^0.1.6"
     consola: "npm:^3.2.3"
     execa: "npm:^8.0.1"
     pathe: "npm:^1.1.2"
-    ufo: "npm:^1.4.0"
+    pkg-types: "npm:^1.1.1"
+    ufo: "npm:^1.5.3"
   bin:
     nypm: dist/cli.mjs
-  checksum: 10c0/b910ad4f2156789e410443cb20e9e604baf9570dd54acc740bd3a7784cb6e96d4a2619c4e6ad2bea28a3f849acafbf4a8bdc9b9e52bd87379a5bd68e3b66400d
+  checksum: 10c0/47aef92be6b7cef2c4eb8992ff5a5bb1de0689951a60101541574fd43cbdc3ec398e35565be7146f2242070b3f21ac4ea5773413d4fbc2a3171b7f470d8aa5a7
   languageName: node
   linkType: hard
 
@@ -11690,7 +11693,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.4.0, ufo@npm:^1.5.3":
+"ufo@npm:^1.5.3":
   version: 1.5.3
   resolution: "ufo@npm:1.5.3"
   checksum: 10c0/1df10702582aa74f4deac4486ecdfd660e74be057355f1afb6adfa14243476cf3d3acff734ccc3d0b74e9bfdefe91d578f3edbbb0a5b2430fe93cd672370e024

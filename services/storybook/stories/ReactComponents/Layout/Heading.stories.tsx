@@ -3,7 +3,7 @@ import { Heading as _Heading } from "@manon/react-components-layout";
 import { classes, vars } from "@manon/themes";
 
 export default {
-  title: "React Component - Heading",
+  title: "React Components/Layout/Heading",
   component: _Heading,
   parameters: {
     layout: "centered",

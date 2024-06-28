@@ -3,7 +3,7 @@ import { Text as _Text } from "@manon/react-components-layout";
 import { classes, vars } from "@manon/themes";
 
 export default {
-  title: "React Component - Text",
+  title: "React Components/Layout/Text",
   component: _Text,
   parameters: {
     layout: "centered",

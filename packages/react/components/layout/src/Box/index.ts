@@ -1,3 +1,4 @@
 export { Box } from "./Box";
+export { Divider } from "./Divider";
 
-export { BoxProps } from "./types";
+export { BoxProps, DividerProps } from "./types";

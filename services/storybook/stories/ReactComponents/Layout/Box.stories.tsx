@@ -2,7 +2,7 @@ import "@manon/react-components-layout/style.css";
 import { Box as _Box } from "@manon/react-components-layout";
 
 export default {
-  title: "React Component - Box",
+  title: "React Components/Layout/Box",
   component: _Box,
   parameters: {
     layout: "centered",
