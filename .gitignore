@@ -25,3 +25,4 @@ dist
 .nx/workspace-data
 
 *storybook.log
+storybook-static
