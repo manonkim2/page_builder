@@ -1,4 +1,4 @@
-export { Box, Divider } from "./Box";
+export { Box, Divider, Flex } from "./Box";
 export { Text, Heading } from "./typography";
 
 export { BoxProps, DividerProps } from "./Box/types";
