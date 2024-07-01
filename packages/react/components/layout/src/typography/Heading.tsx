@@ -23,8 +23,8 @@ const Heading = React.forwardRef(
           props.className,
         ]),
         style: {
-          color: vars.colors.$scale?.[color]?.[700] ?? color,
-          background: vars.colors.$scale?.[background]?.[100] ?? background,
+          color: color && vars.colors.$scale?.[color]?.[700],
+          background: background && vars.colors.$scale?.[background]?.[100],
           ...props.style,
         },
       },
