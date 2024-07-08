@@ -2356,6 +2356,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@manon/react-hooks-button@workspace:^, @manon/react-hooks-button@workspace:packages/react/hooks/button":
+  version: 0.0.0-use.local
+  resolution: "@manon/react-hooks-button@workspace:packages/react/hooks/button"
+  dependencies:
+    "@manon/esbuild-config": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@manon/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@manon/storybook@workspace:services/storybook":
   version: 0.0.0-use.local
   resolution: "@manon/storybook@workspace:services/storybook"
@@ -2363,6 +2380,7 @@ __metadata:
     "@chromatic-com/storybook": "npm:^1.5.0"
     "@manon/react-components-button": "workspace:^"
     "@manon/react-components-layout": "workspace:^"
+    "@manon/react-hooks-button": "workspace:^"
     "@manon/themes": "workspace:^"
     "@storybook/addon-essentials": "npm:^8.1.11"
     "@storybook/addon-interactions": "npm:^8.1.11"
@@ -5862,6 +5880,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "design-system@workspace:."
   dependencies:
+    "@manon/react-hooks-button": "workspace:^"
     "@storybook/addon-docs": "npm:^8.1.11"
     "@typescript-eslint/eslint-plugin": "npm:^6.5.0"
     "@typescript-eslint/parser": "npm:^6.5.0"

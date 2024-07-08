@@ -1,5 +1,8 @@
+import React from "react";
 import "@manon/react-components-button/style.css";
 import { Button as _Button } from "@manon/react-components-button";
+import { useButton } from "@manon/react-hooks-button";
+import { Text } from "@manon/react-components-layout";
 import { vars } from "@manon/themes";
 
 export default {
@@ -33,5 +36,28 @@ export const ButtonStory = {
     isDisabled: false,
     isLoading: false,
     leftIcon: "⭐️",
+  },
+};
+
+export const TextButtonStory = {
+  render: () => {
+    const { buttonProps } = useButton({
+      elementType: "div",
+      onClick: () => {
+        console.log("hi");
+      },
+    });
+
+    return (
+      <Text
+        {...buttonProps}
+        as="div"
+        fontSize="md"
+        color="blue"
+        style={{ userSelect: "none", cursor: "pointer" }}
+      >
+        text button
+      </Text>
+    );
   },
 };

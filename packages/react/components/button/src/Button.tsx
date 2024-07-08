@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import { vars } from "@manon/themes";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { ButtonProps } from "./types";
+import { useButton } from "@manon/react-hooks-button";
 import {
   activeColorVariant,
   buttonStyle,
@@ -14,6 +15,7 @@ import {
 
 const Button = React.forwardRef(
   (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
+    const { buttonProps } = useButton(props);
     const {
       color = "orange",
       size = "md",
@@ -23,10 +25,8 @@ const Button = React.forwardRef(
       rightIcon,
 
       isLoading,
-      isDisabled = false,
       children,
       style,
-      onKeyDown,
     } = props;
 
     const enableColor = vars.colors.$scale[color][500];
@@ -39,26 +39,11 @@ const Button = React.forwardRef(
         ? vars.colors.$scale[color][700]
         : vars.colors.$scale[color][100];
 
-    const disabled = isDisabled || isLoading;
-
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
-      onkeydown?.(event);
-
-      if (event.key === "Enter" || event.key === "13") {
-        event.preventDefault();
-        event.currentTarget.click();
-      }
-    };
-
     return (
       <button
-        {...props}
+        {...buttonProps}
         ref={ref}
         className={clsx([buttonStyle({ size, variant })])}
-        disabled={disabled}
-        onKeyDown={handleKeyDown}
-        onClick={() => console.log("hi")}
-        role="button"
         style={{
           ...assignInlineVars({
             [enableColorVariant]: enableColor,
