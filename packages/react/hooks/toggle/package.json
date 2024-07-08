@@ -1,5 +1,5 @@
 {
-  "name": "@manon/react-hooks-button",
+  "name": "@manon/react-hooks-toggle",
   "version": "0.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -30,7 +30,6 @@
     "react": "*"
   },
   "dependencies": {
-    "@manon/react-hooks-toggle": "workspace:^",
     "clsx": "^2.1.1"
   }
 }

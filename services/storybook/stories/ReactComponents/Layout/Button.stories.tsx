@@ -1,7 +1,7 @@
 import React from "react";
 import "@manon/react-components-button/style.css";
 import { Button as _Button } from "@manon/react-components-button";
-import { useButton } from "@manon/react-hooks-button";
+import { useButton, useToggleButton } from "@manon/react-hooks-button";
 import { Text } from "@manon/react-components-layout";
 import { vars } from "@manon/themes";
 
@@ -58,6 +58,27 @@ export const TextButtonStory = {
       >
         text button
       </Text>
+    );
+  },
+};
+
+export const ToggleButtonStory = {
+  render: () => {
+    const { buttonProps, isSelected } = useToggleButton(
+      {
+        elementType: "button",
+      },
+      false,
+    );
+
+    return (
+      <_Button
+        {...buttonProps}
+        variant={isSelected ? "solid" : "outline"}
+        color="blue"
+      >
+        {isSelected ? "🙂" : "🙃"}
+      </_Button>
     );
   },
 };

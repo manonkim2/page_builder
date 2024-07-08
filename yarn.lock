@@ -2361,6 +2361,24 @@ __metadata:
   resolution: "@manon/react-hooks-button@workspace:packages/react/hooks/button"
   dependencies:
     "@manon/esbuild-config": "workspace:^"
+    "@manon/react-hooks-toggle": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@manon/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@manon/react-hooks-toggle@workspace:^, @manon/react-hooks-toggle@workspace:packages/react/hooks/toggle":
+  version: 0.0.0-use.local
+  resolution: "@manon/react-hooks-toggle@workspace:packages/react/hooks/toggle"
+  dependencies:
+    "@manon/esbuild-config": "workspace:^"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     clsx: "npm:^2.1.1"
