@@ -1,7 +1,7 @@
 import * as React from "react";
 import { HeadingProps } from "./types";
 import { clsx } from "clsx";
-import { StyleSprinkles } from "../core/style.css";
+import { BaseStyle, StyleSprinkles } from "../core/style.css";
 import { extractSprinkleProps } from "../utils/properties";
 import { vars } from "@manon/themes";
 import { headingStyle } from "./style.css";
@@ -16,6 +16,7 @@ const Heading = React.forwardRef(
         ...props,
         ref,
         className: clsx([
+          BaseStyle,
           StyleSprinkles(
             extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
           ),

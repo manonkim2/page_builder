@@ -2,7 +2,7 @@ import * as React from "react";
 import { clsx } from "clsx";
 import { vars } from "@manon/themes";
 
-import { StyleSprinkles } from "../core/style.css";
+import { BaseStyle, StyleSprinkles } from "../core/style.css";
 import { FlexProps } from "./types";
 import { extractSprinkleProps } from "../utils/properties";
 
@@ -29,6 +29,7 @@ const Flex = React.forwardRef(
         ...props,
         ref,
         className: clsx([
+          BaseStyle,
           StyleSprinkles(
             extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
           ),

@@ -1,4 +1,5 @@
 import { vars } from "@manon/themes";
+import { style } from "@vanilla-extract/css";
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
 const MarginAndPaddingProperties = defineProperties({
@@ -31,6 +32,14 @@ const BorderStyleProperties = defineProperties({
 const BoxShadowStyleProps = defineProperties({
   properties: {
     boxShadow: vars.box.shadows,
+  },
+});
+
+export const BaseStyle = style({
+  // @ts-ignore
+  "&:focus-visible": {
+    outline: "none",
+    boxShadow: vars.box.shadows.outline,
   },
 });
 
