@@ -2311,6 +2311,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@manon/react-components-accordion@workspace:^, @manon/react-components-accordion@workspace:packages/react/components/accordion":
+  version: 0.0.0-use.local
+  resolution: "@manon/react-components-accordion@workspace:packages/react/components/accordion"
+  dependencies:
+    "@manon/esbuild-config": "workspace:^"
+    "@manon/react-hooks-button": "workspace:^"
+    "@manon/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.15.3"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.7"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@manon/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@manon/react-components-button@workspace:^, @manon/react-components-button@workspace:packages/react/components/button":
   version: 0.0.0-use.local
   resolution: "@manon/react-components-button@workspace:packages/react/components/button"
@@ -2396,6 +2420,7 @@ __metadata:
   resolution: "@manon/storybook@workspace:services/storybook"
   dependencies:
     "@chromatic-com/storybook": "npm:^1.5.0"
+    "@manon/react-components-accordion": "workspace:^"
     "@manon/react-components-button": "workspace:^"
     "@manon/react-components-layout": "workspace:^"
     "@manon/react-hooks-button": "workspace:^"
