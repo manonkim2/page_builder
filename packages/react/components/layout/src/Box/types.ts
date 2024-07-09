@@ -2,6 +2,7 @@ import { vars } from "@manon/themes";
 import { AsElementProps, StyleProps } from "../core/types";
 import * as React from "react";
 import { CSSProperties } from "@vanilla-extract/css";
+import { TextProps } from "../typography";
 
 export type BoxProps = AsElementProps & StyleProps;
 
@@ -46,3 +47,15 @@ export type GridItemProps = {
   rowStart?: CSSProperties["gridRowStart"];
   rowSpan?: CSSProperties["gridRow"];
 } & BoxProps;
+
+export type ListProps = {
+  variant?: "ordered" | "unordered";
+  spacing?: keyof typeof vars.box.spacing;
+} & BoxProps;
+
+export type OrderListProps = Omit<ListProps, "variant">;
+export type ListItemProps = TextProps;
+
+export type UnorderedListProps = Omit<ListProps, "variant"> & {
+  listStyleType?: CSSProperties["listStyleType"];
+};
