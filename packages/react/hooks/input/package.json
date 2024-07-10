@@ -1,0 +1,36 @@
+{
+  "name": "@manon/react-hooks-input",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
+    "build:js": "node build.js",
+    "build:type": "yarn tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist",
+    "dev": "yarn build:js --watch && yarn build:type --watch"
+  },
+  "devDependencies": {
+    "@manon/esbuild-config": "workspace:^",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@manon/themes": "workspace:^",
+    "react": "*"
+  },
+  "dependencies": {
+    "@manon/react-hooks-toggle": "workspace:^",
+    "clsx": "^2.1.1"
+  }
+}

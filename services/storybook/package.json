@@ -5,6 +5,7 @@
     "@chromatic-com/storybook": "^1.5.0",
     "@manon/react-components-accordion": "workspace:^",
     "@manon/react-components-button": "workspace:^",
+    "@manon/react-components-input": "workspace:^",
     "@manon/react-components-layout": "workspace:^",
     "@manon/react-hooks-button": "workspace:^",
     "@manon/themes": "workspace:^",
