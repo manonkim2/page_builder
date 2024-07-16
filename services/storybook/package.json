@@ -11,6 +11,7 @@
     "@manon/react-components-toast": "workspace:^",
     "@manon/react-hooks-button": "workspace:^",
     "@manon/themes": "workspace:^",
+    "@storybook/addon-a11y": "7.4.5",
     "@storybook/addon-essentials": "^8.1.11",
     "@storybook/addon-interactions": "^8.1.11",
     "@storybook/addon-links": "^8.1.11",
@@ -25,11 +26,13 @@
     "@testing-library/user-event": "^14.5.1",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/ui": "^2.0.3",
+    "chromatic": "^11.5.5",
     "happy-dom": "^14.12.3",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "storybook": "^8.1.11",
+    "storybook-addon-pseudo-states": "^3.1.1",
     "vite": "^5.3.1",
     "vitest": "^2.0.3"
   },
@@ -37,6 +40,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
-    "build": "storybook build"
-  }
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_de8c431f21cdb56"
+  },
+  "version": ""
 }

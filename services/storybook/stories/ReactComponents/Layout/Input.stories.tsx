@@ -26,3 +26,10 @@ export const InputGroupStory = {
     </InputGroup>
   ),
 };
+
+export const InputFocusVisibleState = {
+  render: () => <Input />,
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
+};
