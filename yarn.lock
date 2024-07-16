@@ -2428,6 +2428,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@manon/react-components-toast@workspace:^, @manon/react-components-toast@workspace:packages/react/components/toast":
+  version: 0.0.0-use.local
+  resolution: "@manon/react-components-toast@workspace:packages/react/components/toast"
+  dependencies:
+    "@manon/esbuild-config": "workspace:^"
+    "@manon/react-hooks-input": "workspace:^"
+    "@manon/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.15.3"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.7"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@manon/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@manon/react-hooks-button@workspace:^, @manon/react-hooks-button@workspace:packages/react/hooks/button":
   version: 0.0.0-use.local
   resolution: "@manon/react-hooks-button@workspace:packages/react/hooks/button"
@@ -2509,6 +2533,7 @@ __metadata:
     "@manon/react-components-input": "workspace:^"
     "@manon/react-components-layout": "workspace:^"
     "@manon/react-components-select": "workspace:^"
+    "@manon/react-components-toast": "workspace:^"
     "@manon/react-hooks-button": "workspace:^"
     "@manon/themes": "workspace:^"
     "@storybook/addon-essentials": "npm:^8.1.11"
