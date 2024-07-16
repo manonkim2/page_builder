@@ -7,6 +7,7 @@
     "@manon/react-components-button": "workspace:^",
     "@manon/react-components-input": "workspace:^",
     "@manon/react-components-layout": "workspace:^",
+    "@manon/react-components-select": "workspace:^",
     "@manon/react-hooks-button": "workspace:^",
     "@manon/themes": "workspace:^",
     "@storybook/addon-essentials": "^8.1.11",

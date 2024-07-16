@@ -2404,6 +2404,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@manon/react-components-select@workspace:^, @manon/react-components-select@workspace:packages/react/components/select":
+  version: 0.0.0-use.local
+  resolution: "@manon/react-components-select@workspace:packages/react/components/select"
+  dependencies:
+    "@manon/esbuild-config": "workspace:^"
+    "@manon/react-hooks-select": "workspace:^"
+    "@manon/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.15.3"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.7"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@manon/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@manon/react-hooks-button@workspace:^, @manon/react-hooks-button@workspace:packages/react/hooks/button":
   version: 0.0.0-use.local
   resolution: "@manon/react-hooks-button@workspace:packages/react/hooks/button"
@@ -2425,6 +2449,24 @@ __metadata:
 "@manon/react-hooks-input@workspace:^, @manon/react-hooks-input@workspace:packages/react/hooks/input":
   version: 0.0.0-use.local
   resolution: "@manon/react-hooks-input@workspace:packages/react/hooks/input"
+  dependencies:
+    "@manon/esbuild-config": "workspace:^"
+    "@manon/react-hooks-toggle": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@manon/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@manon/react-hooks-select@workspace:^, @manon/react-hooks-select@workspace:packages/react/hooks/select":
+  version: 0.0.0-use.local
+  resolution: "@manon/react-hooks-select@workspace:packages/react/hooks/select"
   dependencies:
     "@manon/esbuild-config": "workspace:^"
     "@manon/react-hooks-toggle": "workspace:^"
@@ -2466,6 +2508,7 @@ __metadata:
     "@manon/react-components-button": "workspace:^"
     "@manon/react-components-input": "workspace:^"
     "@manon/react-components-layout": "workspace:^"
+    "@manon/react-components-select": "workspace:^"
     "@manon/react-hooks-button": "workspace:^"
     "@manon/themes": "workspace:^"
     "@storybook/addon-essentials": "npm:^8.1.11"
