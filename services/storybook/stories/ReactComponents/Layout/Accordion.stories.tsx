@@ -50,3 +50,41 @@ export const AccordionStory = {
     </Accordion>
   ),
 };
+
+export const AccordionTestStory = {
+  args: {
+    items: [
+      {
+        name: "목록1",
+        content: "내용1",
+      },
+      {
+        name: "목록2",
+        content: "내용2",
+      },
+    ],
+    defaultActiveItems: [],
+  },
+
+  render: ({ defaultactiveItems, items }) => (
+    <Accordion
+      defaultActiveItems={defaultactiveItems}
+      style={{ width: "500px" }}
+    >
+      {items.map((item, index) => (
+        <AccordionItem key={item.name} itemName={item.name}>
+          <AccordionButton data-testid={`button-${index}`}>
+            <Heading color="gray" fontSize="lg">
+              {item.name}
+            </Heading>
+          </AccordionButton>
+          <AccordionPanel data-testid={`panel-${index}`}>
+            <Text color="gray" fontSize="md">
+              {item.content}
+            </Text>
+          </AccordionPanel>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  ),
+};
