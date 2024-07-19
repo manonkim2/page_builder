@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
     "target": "ESNext",
-    "module": "EsNext",
+    "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "declaration": true,
     "strict": true,
     "moduleResolution": "node",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "skipLibCheck": true
   }
 }
