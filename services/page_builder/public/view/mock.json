@@ -1,0 +1,209 @@
+{
+  "id": "mock",
+  "slug": "온라인-강의-프로모션-100원-이벤트",
+  "metadata": {
+    "title": "100원 딜 프로모션 이벤트"
+  },
+  "slices": [
+    {
+      "sliceName": "TextSlice",
+      "data": {
+        "text": "⚠ 본 이벤트는 종료되었습니다 (~8/6)",
+        "sliceStyle": {
+          "textColor": "#fff",
+          "textWeight": 700,
+          "textSize": 16,
+          "backgroundColor": "#000"
+        }
+      }
+    },
+    {
+      "sliceName": "ImageSlice",
+      "data": {
+        "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/main_sample.webp",
+        "alt": "온라인 강의 단돈 100원 이벤트 안내",
+        "sliceStyle": {
+          "paddingX": 8,
+          "backgroundColor": "#FFD951"
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 60,
+          "backgroundColor": "#000"
+        }
+      }
+    },
+    {
+      "sliceName": "ImageSlice",
+      "data": {
+        "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/coin.webp",
+        "alt": "100원 그림 일러스트",
+        "sliceStyle": {
+          "width": "90px",
+          "backgroundColor": "#000"
+        }
+      }
+    },
+    {
+      "sliceName": "TextSlice",
+      "data": {
+        "text": "공부 시작하려고 결심한 강의\n100원만 더 내고 이 모든 혜택 가져가세요!",
+        "highlightTexts": ["100원만"],
+        "sliceStyle": {
+          "textWeight": 700,
+          "textSize": 24,
+          "textColor": "#fff",
+          "backgroundColor": "#000",
+          "highlightTextColor": "#FFD64B"
+        }
+      }
+    },
+    {
+      "sliceName": "TextSlice",
+      "data": {
+        "text": "원하는 강의 골라 결제 시 100원만 더 내면 이 모든 혜택을 드립니다!",
+        "sliceStyle": {
+          "textWeight": 700,
+          "textSize": 14,
+          "textColor": "#fff",
+          "backgroundColor": "#000"
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 60,
+          "backgroundColor": "#171923"
+        }
+      }
+    },
+    {
+      "sliceName": "TextSlice",
+      "data": {
+        "text": "100원에 만나볼 수 있는\nBEST 강의 라인업",
+        "highlightTexts": ["BEST 강의"],
+        "sliceStyle": {
+          "textWeight": 700,
+          "textSize": 24,
+          "textColor": "#fff",
+          "backgroundColor": "#171923",
+          "highlightTextColor": "#FFD64B"
+        }
+      }
+    },
+    {
+      "sliceName": "TextSlice",
+      "data": {
+        "text": "100일간 내 마음대로 무제한 수강 가능한\n카테고리별 BEST 강의 라인업을 아래에서 확인해보세요!",
+        "sliceStyle": {
+          "textSize": 14,
+          "textColor": "#fff",
+          "backgroundColor": "#171923"
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 32,
+          "backgroundColor": "#171923"
+        }
+      }
+    },
+    {
+      "sliceName": "ImageSliderSectionSlice",
+      "data": {
+        "text": "🖥️ 프로그래밍",
+        "images": [
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_1.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 1"
+          },
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_2.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 2"
+          },
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_3.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 3"
+          },
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_4.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 4"
+          },
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_5.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 5"
+          },
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_6.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 6"
+          },
+          {
+            "imageUrl": "https://pub-4cac1cb2cd2148198551b4dbb3ba0fa6.r2.dev/edu_7.webp",
+            "alt": "강의 라인업 1 프로그래밍: 강의 7"
+          }
+        ],
+        "sliceStyle": {
+          "textColor": "#32BFA1",
+          "paddingX": 8,
+          "backgroundColor": "#171923"
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 32,
+          "backgroundColor": "#171923"
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 32,
+          "backgroundColor": "#171923"
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 80,
+          "backgroundColor": "#E2E8F0"
+        }
+      }
+    },
+    {
+      "sliceName": "TextSlice",
+      "data": {
+        "text": "100원딜 이벤트 주의사항",
+        "sliceStyle": {
+          "backgroundColor": "#E2E8F0",
+          "textSize": 24,
+          "textWeight": 700
+        }
+      }
+    },
+    {
+      "sliceName": "SpacingSlice",
+      "data": {
+        "sliceStyle": {
+          "height": 16,
+          "backgroundColor": "#E2E8F0"
+        }
+      }
+    }
+  ]
+}

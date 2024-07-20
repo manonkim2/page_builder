@@ -35,7 +35,7 @@ const ImageSlice = ({ imageUrl, alt, sliceStyle }: IImageSliceProps) => {
         justifyContent: "center",
       }}
     >
-      <img src={`${CDN_BASE_URL}/${imageUrl}`} alt={alt} width={width} />
+      <img src={imageUrl} alt={alt} width={width} />
     </Box>
   );
 };
