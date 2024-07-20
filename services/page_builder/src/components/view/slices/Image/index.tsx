@@ -1,3 +1,4 @@
+import { CDN_BASE_URL } from "@/src/constants";
 import { Box } from "@manon/react-components-layout";
 import { vars } from "@manon/themes";
 
@@ -5,7 +6,7 @@ type IImageSliceProps = {
   imageUrl: string;
   alt: string;
   sliceStyle?: {
-    width?: string;
+    width?: number;
     padding?: keyof typeof vars.box.spacing;
     paddingX?: keyof typeof vars.box.spacing;
     paddingY?: keyof typeof vars.box.spacing;
@@ -28,13 +29,13 @@ const ImageSlice = ({ imageUrl, alt, sliceStyle }: IImageSliceProps) => {
       paddingX={paddingX}
       paddingY={paddingY}
       style={{
-        width,
+        width: "100%",
         backgroundColor,
         display: "flex",
         justifyContent: "center",
       }}
     >
-      <img src={imageUrl} alt={alt} />
+      <img src={`${CDN_BASE_URL}/${imageUrl}`} alt={alt} width={width} />
     </Box>
   );
 };

@@ -4,6 +4,7 @@
     "moduleResolution": "bundler",
     "jsx": "preserve",
     "incremental": true,
+    "noUnusedParameters": true,
     "paths": {
       "@/src/*": ["./src/*"]
     }
