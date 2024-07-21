@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 
 import MobileFirstLayout from "@/src/components/view/MobileFirstLayout";
 
-import JSON_SCHEMA from "../../../public/view/mock.json";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import { CDN_MOCK_URL } from "@/src/constants";
 import TextSlice from "@/src/components/view/slices/Text";
