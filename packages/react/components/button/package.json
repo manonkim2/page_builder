@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@manon/esbuild-config": "workspace:^",
+    "@manon/react-hooks-button": "workspace:^",
     "@manon/themes": "workspace:^",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
