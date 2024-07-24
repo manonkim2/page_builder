@@ -1,4 +1,4 @@
-export const ViewSliceSchemaSnippet = {
+export const viewSliceSchemaSnippet = {
   init: {
     slug: "",
     metadata: {
