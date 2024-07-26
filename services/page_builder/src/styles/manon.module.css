@@ -1,2 +1,5 @@
 @import "@manon/themes/themes.css";
 @import "@manon/react-components-layout/style.css";
+@import "@manon/react-components-accordion/style.css";
+@import "@manon/react-components-button/style.css";
+@import "@manon/react-components-toast/style.css";

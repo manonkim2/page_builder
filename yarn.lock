@@ -2565,8 +2565,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@manon/page_builder@workspace:services/page_builder"
   dependencies:
+    "@manon/react-components-accordion": "workspace:^"
     "@manon/react-components-button": "workspace:^"
     "@manon/react-components-layout": "workspace:^"
+    "@manon/react-components-toast": "workspace:^"
     "@manon/themes": "workspace:^"
     "@monaco-editor/react": "npm:^4.6.0"
     "@types/node": "npm:^20.14.11"
