@@ -1,25 +1,11 @@
-import { vars } from "@manon/themes";
 import { Text } from "@manon/react-components-layout";
 import { STATIC_LIGHT } from "@/src/styles/constants";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
+import { TextSliceSchema } from "@/src/utils/validation/schema/slices";
 
-type Props = {
-  text: string;
-  highlightTexts?: string[];
-  sliceStyle?: {
-    padding?: keyof typeof vars.box.spacing;
-    paddingX?: keyof typeof vars.box.spacing;
-    paddingY?: keyof typeof vars.box.spacing;
-    backgroundColor?: string;
-    textColor?: string;
-    textSize?: keyof typeof vars.typography.fontSize;
-    textWeight?: keyof typeof vars.typography.fontWeight;
-    textAlign?: "left" | "center" | "right";
-    highlightColor?: string;
-    highlightWeight?: keyof typeof vars.typography.fontWeight;
-  };
-};
+type TextProps = SliceSchemaProps<typeof TextSliceSchema>;
 
-const TextSlice = ({ text, highlightTexts = [], sliceStyle }: Props) => {
+const TextSlice = ({ text, highlightTexts = [], sliceStyle }: TextProps) => {
   const {
     padding = 2,
     paddingX = 2,
@@ -29,8 +15,8 @@ const TextSlice = ({ text, highlightTexts = [], sliceStyle }: Props) => {
     textSize,
     textWeight,
     textAlign = "center",
-    highlightColor = STATIC_LIGHT.yellow[400],
-    highlightWeight,
+    highlightTextColor = STATIC_LIGHT.yellow[400],
+    highlightTextWeight,
   } = sliceStyle ?? {};
 
   const regex = new RegExp(`(${highlightTexts.join("|")})`, "gi");
@@ -41,8 +27,8 @@ const TextSlice = ({ text, highlightTexts = [], sliceStyle }: Props) => {
         <span
           key={`${word}-${index}`}
           style={{
-            color: highlightColor,
-            fontWeight: highlightWeight ?? textWeight,
+            color: highlightTextColor,
+            fontWeight: highlightTextWeight ?? textWeight,
           }}
         >
           {word}

@@ -7,29 +7,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { convertSpacingRemToPx } from "@/src/utils/size";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
+import { ImageSliderSliceSchema } from "@/src/utils/validation/schema/slices";
 
-type Image = {
-  imageUrl: string;
-  alt: string;
-};
+type ImageSliderProps = SliceSchemaProps<typeof ImageSliderSliceSchema>;
 
-interface IImageSliderProps {
-  images: Image[];
-  slicestyle?: {
-    backgroundColor: string;
-    imageItemWidth?: number;
-    spaceBetween?: number;
-    paddingX?: keyof typeof vars.box.spacing;
-  };
-}
-
-const ImageSlider = ({ images, slicestyle }: IImageSliderProps) => {
+const ImageSlider = ({ images, sliceStyle }: ImageSliderProps) => {
   const {
     backgroundColor = "transparent",
     imageItemWidth = 240,
     spaceBetween = 16,
     paddingX = 8,
-  } = slicestyle ?? {};
+  } = sliceStyle ?? {};
 
   const offset = convertSpacingRemToPx(paddingX);
 

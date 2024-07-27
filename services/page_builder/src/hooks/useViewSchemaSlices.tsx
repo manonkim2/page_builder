@@ -1,26 +1,12 @@
 import { useMemo } from "react";
-import MetaDataSlice, {
-  IMetaDataSliceProps,
-} from "../components/view/slices/MetaData";
+import MetaDataSlice from "../components/view/slices/MetaData";
 import ImageSlice from "../components/view/slices/Image";
 import SpacingSlice from "../components/view/slices/Spacing";
 import TextSlice from "../components/view/slices/Text";
+import { ViewSchemaProps } from "../utils/validation/schema/types";
+import { ImageSliderSectionSlice } from "../components/view/slices/ImageSlicerSection";
 
-export type ViewSchema = {
-  slug: string;
-  metadata?: IMetaDataSliceProps;
-  slices: {
-    sliceName:
-      | "TextSlice"
-      | "ImageSlice"
-      | "SpacingSlice"
-      | "ImageSliderSectionSlice"
-      | "AccordionSlice";
-    data: any;
-  }[];
-};
-
-export const useViewSchemaSlices = (viewSchema: ViewSchema) => {
+export const useViewSchemaSlices = (viewSchema: ViewSchemaProps) => {
   const slices = useMemo(() => {
     const sliceList = [] as React.ReactNode[];
 
@@ -43,7 +29,7 @@ export const useViewSchemaSlices = (viewSchema: ViewSchema) => {
           break;
         }
         case "ImageSliderSectionSlice": {
-          sliceList.push(<ImageSlice {...data} />);
+          sliceList.push(<ImageSliderSectionSlice {...data} />);
           break;
         }
       }

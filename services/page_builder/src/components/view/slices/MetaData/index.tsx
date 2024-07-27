@@ -1,16 +1,14 @@
+import { MetadataSliceSchema } from "@/src/utils/validation/schema/slices";
+import { SchemaProps } from "@/src/utils/validation/schema/types";
 import Head from "next/head";
 
-export type IMetaDataSliceProps = {
-  title?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-};
+type MetaDataSliceProps = SchemaProps<typeof MetadataSliceSchema>;
 
 const MetaDataSlice = ({
   title,
   ogDescription,
   ogTitle,
-}: IMetaDataSliceProps) => {
+}: MetaDataSliceProps) => {
   const currentOGTitle = ogTitle ?? title;
 
   return (

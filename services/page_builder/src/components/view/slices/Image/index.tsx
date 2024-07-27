@@ -1,20 +1,11 @@
 import { CDN_BASE_URL } from "@/src/constants";
+import { ImageSliceSchema } from "@/src/utils/validation/schema/slices";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
 import { Box } from "@manon/react-components-layout";
-import { vars } from "@manon/themes";
 
-type IImageSliceProps = {
-  imageUrl: string;
-  alt: string;
-  sliceStyle?: {
-    width?: number;
-    padding?: keyof typeof vars.box.spacing;
-    paddingX?: keyof typeof vars.box.spacing;
-    paddingY?: keyof typeof vars.box.spacing;
-    backgroundColor?: string;
-  };
-};
+type ImageSliceProps = SliceSchemaProps<typeof ImageSliceSchema>;
 
-const ImageSlice = ({ imageUrl, alt, sliceStyle }: IImageSliceProps) => {
+const ImageSlice = ({ imageUrl, alt, sliceStyle }: ImageSliceProps) => {
   const {
     width = "100%",
     padding = 0,

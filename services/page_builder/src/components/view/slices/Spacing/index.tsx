@@ -1,14 +1,11 @@
+import { SpacingSliceSchema } from "@/src/utils/validation/schema/slices";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
 import { Box } from "@manon/react-components-layout";
 import { vars } from "@manon/themes";
 
-interface ISpacingSliceProps {
-  sliceStyle?: {
-    height?: number;
-    backgroundColor?: string;
-  };
-}
+type SpacingSliceProps = SliceSchemaProps<typeof SpacingSliceSchema>;
 
-const SpacingSlice = ({ sliceStyle }: ISpacingSliceProps) => {
+const SpacingSlice = ({ sliceStyle }: SpacingSliceProps) => {
   const {
     height = 16,
     backgroundColor = vars.colors.$static.light.color.white,
