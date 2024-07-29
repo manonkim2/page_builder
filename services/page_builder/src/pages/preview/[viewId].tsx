@@ -1,14 +1,15 @@
 import MobileFirstLayout from "@/src/components/view/MobileFirstLayout";
 import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
 import { previewStorage } from "@/src/utils/initLocalStorage";
-import { viewSliceSchemaSnippet } from "@/src/utils/viewSlicesSchemaSnippet";
+import { ViewSliceSchemaSnippet } from "@/src/utils/viewSlicesSchemaSnippet";
+
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const PreviewPage = () => {
   const router = useRouter();
   const { viewId } = router.query;
-  const [viewSchema, setViewSchema] = useState(viewSliceSchemaSnippet.init);
+  const [viewSchema, setViewSchema] = useState(ViewSliceSchemaSnippet.init);
 
   useEffect(() => {
     if (!viewId) return;

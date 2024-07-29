@@ -1,11 +1,13 @@
+import JsonPresetList from "@/src/components/Editor";
 import JsonEditor from "@/src/components/Editor/Json";
 import DesktopFirstLayout from "@/src/components/view/DesktopFirstLayout";
 import DesktopBody from "@/src/components/view/DesktopFirstLayout/Body";
 import DesktopNav from "@/src/components/view/DesktopFirstLayout/Nav";
+import SideNav from "@/src/components/view/DesktopFirstLayout/SideNav";
 import { useViewSchemaValidation } from "@/src/hooks/useViewSchemaValidation";
 import { formatObjectToJson } from "@/src/utils/formatObjectToJson";
 import { previewStorage } from "@/src/utils/initLocalStorage";
-import { viewSliceSchemaSnippet } from "@/src/utils/viewSlicesSchemaSnippet";
+import { ViewSliceSchemaSnippet } from "@/src/utils/viewSlicesSchemaSnippet";
 
 import { Button } from "@manon/react-components-button";
 import { useToast } from "@manon/react-components-toast";
@@ -18,14 +20,14 @@ const EditorNewPage: React.FC = () => {
   const { toast } = useToast();
 
   const [schema, setSchema] = useState(
-    formatObjectToJson(viewSliceSchemaSnippet.init),
+    formatObjectToJson(ViewSliceSchemaSnippet.init),
   );
 
   const { validateViewSchema, handleEditorValidation } =
     useViewSchemaValidation();
 
   const handleReset = () => {
-    setSchema(formatObjectToJson(viewSliceSchemaSnippet.init));
+    setSchema(formatObjectToJson(ViewSliceSchemaSnippet.init));
   };
 
   const handlePreview = () => {
@@ -63,6 +65,13 @@ const EditorNewPage: React.FC = () => {
         </Button>
       </DesktopNav>
       <DesktopBody>
+        <SideNav>
+          <JsonPresetList
+            validateViewSchema={validateViewSchema}
+            schema={schema}
+            setSchema={setSchema}
+          />
+        </SideNav>
         <JsonEditor
           value={schema}
           onChange={(value) => setSchema(value || "")}

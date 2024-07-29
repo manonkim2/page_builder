@@ -1,8 +1,8 @@
-import { BoxProps, Box } from "@manon/react-components-layout";
+import { Flex, FlexProps } from "@manon/react-components-layout";
 
-type IDesktopFirstBodyProps = BoxProps;
+type DesktopFirstBodyProps = FlexProps;
 
-const DesktopFirstBody = (props: BoxProps) => {
+const DesktopFirstBody = (props: DesktopFirstBodyProps) => {
   const { children, padding = 2, className, ...rest } = props;
 
   const currentClassName = [
@@ -11,9 +11,9 @@ const DesktopFirstBody = (props: BoxProps) => {
   ].join(" ");
 
   return (
-    <Box {...rest} padding={padding} className={currentClassName}>
+    <Flex {...rest} padding={padding} className={currentClassName}>
       {children}
-    </Box>
+    </Flex>
   );
 };
 
