@@ -1,3 +1,4 @@
+import { putViewDetail } from "@/src/apis/worker/putViewDetail";
 import JsonPresetList from "@/src/components/Editor";
 import JsonEditor from "@/src/components/Editor/Json";
 import DesktopFirstLayout from "@/src/components/view/DesktopFirstLayout";
@@ -16,7 +17,7 @@ import ShortUniqueId from "short-unique-id";
 
 const EditorNewPage: React.FC = () => {
   const { randomUUID } = new ShortUniqueId({ length: 10 });
-  const viewId = randomUUID();
+  const [viewId] = useState(randomUUID());
   const { toast } = useToast();
 
   const [schema, setSchema] = useState(
@@ -46,6 +47,37 @@ const EditorNewPage: React.FC = () => {
     });
   };
 
+  const handlePublish = () => {
+    validateViewSchema({
+      viewSchema: schema,
+      onSuccess: async () => {
+        try {
+          await putViewDetail({
+            viewId,
+            data: {
+              value: JSON.stringify(schema),
+              metadata: {
+                createdAt: new Date().toISOString(),
+              },
+            },
+          });
+        } catch (error) {
+          toast({
+            payload: {
+              // @ts-ignore
+              message: `[Fetch Error] ${error.message}`,
+            },
+          });
+        }
+      },
+      onError: ({ message }) => {
+        toast({
+          payload: { message },
+        });
+      },
+    });
+  };
+
   return (
     <DesktopFirstLayout>
       <DesktopNav gap={8}>
@@ -60,7 +92,7 @@ const EditorNewPage: React.FC = () => {
         >
           미리보기
         </Button>
-        <Button size="md" color="green">
+        <Button size="md" color="green" onClick={handlePublish}>
           배포하기
         </Button>
       </DesktopNav>

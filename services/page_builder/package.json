@@ -16,6 +16,7 @@
     "@manon/react-components-toast": "workspace:^",
     "@manon/themes": "workspace:^",
     "@monaco-editor/react": "^4.6.0",
+    "axios": "^1.7.2",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
