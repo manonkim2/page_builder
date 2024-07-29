@@ -55,12 +55,18 @@ const EditorNewPage: React.FC = () => {
           await putViewDetail({
             viewId,
             data: {
-              value: JSON.stringify(schema),
+              value: schema,
               metadata: {
                 createdAt: new Date().toISOString(),
               },
             },
           });
+          // 배포 후 새창으로 미리보기 페이지 열기
+          const objectifiedSchema = JSON.parse(schema);
+          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
+          const slug = `${convertedSlug}-${viewId}`;
+
+          window.open(`/view/${slug}`, "_blank");
         } catch (error) {
           toast({
             payload: {
