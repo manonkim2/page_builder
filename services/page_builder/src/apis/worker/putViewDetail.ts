@@ -1,4 +1,5 @@
 import { WORKER_BASE_PATH, workerInstance } from ".";
+import { getGetViewDetailPath } from "./getViewDetail";
 import { ViewMetadata } from "./type";
 
 type ViewDetailRequestData = {
@@ -11,11 +12,8 @@ type Params = {
   data: ViewDetailRequestData;
 };
 
-const getPutViewDetailPath = (viewId: string) =>
-  `${WORKER_BASE_PATH}/${viewId}`;
-
 export const putViewDetail = async ({ viewId, data }: Params) => {
-  const response = await workerInstance.put(getPutViewDetailPath(viewId), data);
+  const response = await workerInstance.put(getGetViewDetailPath(viewId), data);
 
   console.log("res", response);
 };
