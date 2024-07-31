@@ -14,6 +14,7 @@ import { Button } from "@manon/react-components-button";
 import { useToast } from "@manon/react-components-toast";
 import { useState } from "react";
 import ShortUniqueId from "short-unique-id";
+import { json } from "stream/consumers";
 
 const EditorNewPage: React.FC = () => {
   const { randomUUID } = new ShortUniqueId({ length: 10 });
@@ -51,20 +52,22 @@ const EditorNewPage: React.FC = () => {
     validateViewSchema({
       viewSchema: schema,
       onSuccess: async () => {
+        // 배포 후 새창으로 미리보기 페이지 열기
+        const objectifiedSchema = JSON.parse(schema);
+        const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
+        const slug = `${convertedSlug}-${viewId}`;
+
         try {
           await putViewDetail({
             viewId,
             data: {
               value: schema,
               metadata: {
-                createdAt: new Date().toISOString(),
+                title: objectifiedSchema.slug,
+                createAt: new Date().toISOString(),
               },
             },
           });
-          // 배포 후 새창으로 미리보기 페이지 열기
-          const objectifiedSchema = JSON.parse(schema);
-          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
-          const slug = `${convertedSlug}-${viewId}`;
 
           window.open(`/view/${slug}`, "_blank");
         } catch (error) {
