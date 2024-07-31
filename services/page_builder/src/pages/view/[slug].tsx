@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import { CDN_BASE_URL } from "@/src/constants";
 import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
-import MobileFirstLayout from "@/src/components/view/MobileFirstLayout";
+import MobileFirstLayout from "@/src/components/Common/Layout/MobileFirstLayout";
 import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { getViewDetail } from "@/src/apis/worker/getViewDetail";
 

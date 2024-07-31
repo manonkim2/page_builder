@@ -1,5 +1,5 @@
 import { Editor, EditorProps } from "@monaco-editor/react";
-import { fontSize } from "../../../../../packages/themes/dist/variables/typography";
+import { fontSize } from "../../../../../../packages/themes/dist/variables/typography";
 
 type IJsonEditorProps = EditorProps;
 

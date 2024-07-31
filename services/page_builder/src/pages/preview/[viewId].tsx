@@ -1,4 +1,4 @@
-import MobileFirstLayout from "@/src/components/view/MobileFirstLayout";
+import MobileFirstLayout from "@/src/components/Common/Layout/MobileFirstLayout";
 import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
 import { previewStorage } from "@/src/utils/initLocalStorage";
 import { ViewSliceSchemaSnippet } from "@/src/utils/viewSlicesSchemaSnippet";

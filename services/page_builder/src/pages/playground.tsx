@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 
-import MobileFirstLayout from "../components/view/MobileFirstLayout";
-import TextSlice from "../components/view/slices/Text";
-import ImageSlice from "../components/view/slices/Image";
-import SpacingSlice from "../components/view/slices/Spacing";
-import ImageSlider from "../components/view/slices/ImageSlider";
+import MobileFirstLayout from "../components/Common/Layout/MobileFirstLayout";
+import TextSlice from "../components/Features/view/slices/Text";
+import ImageSlice from "../components/Features/view/slices/Image";
+import SpacingSlice from "../components/Features/view/slices/Spacing";
+import ImageSlider from "../components/Features/view/slices/ImageSlider";
 
 import { STATIC_LIGHT } from "../styles/constants";
 import { CDN_BASE_URL } from "../constants";

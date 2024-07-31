@@ -1,20 +1,18 @@
 import Link from "next/link";
 import { Button } from "@manon/react-components-button";
-import DesktopFirstLayout from "@/src/components/view/DesktopFirstLayout";
-import DesktopFirstNav from "@/src/components/view/DesktopFirstLayout/Nav";
+import DesktopFirstLayout from "@/src/components/Common/Layout/DesktopFirstLayout";
+import DesktopFirstNav from "@/src/components/Common/Layout/DesktopFirstLayout/Nav";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import DesktopFirstBody from "@/src/components/view/DesktopFirstLayout/Body";
-import ViewList from "@/src/components/EditorPage/ViewList";
+import DesktopFirstBody from "@/src/components/Common/Layout/DesktopFirstLayout/Body";
+import ViewList from "@/src/components/Features/EditorPage/ViewList";
 import {
   getViewList,
   ViewListResponseData,
 } from "@/src/apis/worker/getViewList";
 
-interface IEditorPageProps {
-  keys: InferGetServerSidePropsType<typeof getServerSideProps>;
-}
-
-const EditorPage = ({ keys }: IEditorPageProps) => {
+const EditorPage = ({
+  keys,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <DesktopFirstLayout>
       <DesktopFirstNav>

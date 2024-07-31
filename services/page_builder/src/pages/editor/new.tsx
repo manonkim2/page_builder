@@ -1,10 +1,10 @@
 import { putViewDetail } from "@/src/apis/worker/putViewDetail";
-import JsonPresetList from "@/src/components/Editor";
-import JsonEditor from "@/src/components/Editor/Json";
-import DesktopFirstLayout from "@/src/components/view/DesktopFirstLayout";
-import DesktopBody from "@/src/components/view/DesktopFirstLayout/Body";
-import DesktopNav from "@/src/components/view/DesktopFirstLayout/Nav";
-import SideNav from "@/src/components/view/DesktopFirstLayout/SideNav";
+import JsonPresetList from "@/src/components/Features/Editor";
+import JsonEditor from "@/src/components/Common/Editor/Json";
+import DesktopFirstLayout from "@/src/components/Common/Layout/DesktopFirstLayout";
+import DesktopBody from "@/src/components/Common/Layout/DesktopFirstLayout/Body";
+import DesktopNav from "@/src/components/Common/Layout/DesktopFirstLayout/Nav";
+import SideNav from "@/src/components/Common/Layout/DesktopFirstLayout/SideNav";
 import { useViewSchemaValidation } from "@/src/hooks/useViewSchemaValidation";
 import { formatObjectToJson } from "@/src/utils/formatObjectToJson";
 import { previewStorage } from "@/src/utils/initLocalStorage";
