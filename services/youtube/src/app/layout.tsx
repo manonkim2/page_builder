@@ -1,5 +1,6 @@
-import "./globals.css";
+import "@/src/shared/styles";
 import type { Metadata } from "next";
+import { ThemeScript } from "../shared/components/TyemeScript";
 
 export const metadata: Metadata = {
   title: "YouTube",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <ThemeScript />
+        {children}
+      </body>
     </html>
   );
 }
