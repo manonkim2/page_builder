@@ -1,11 +1,19 @@
-import { getVideoPopularList } from "../../api/getVideosPopularList";
+"use client";
 
-const VideoPopularList = async () => {
-  const data = await getVideoPopularList({});
+import { useGetVideoPopularList } from "../../hooks/useGetVideiosPopularList";
+import * as s from "./index.css";
+import VideoPopularListItem from "./ListItem";
+
+const VideoPopularList = () => {
+  const { data } = useGetVideoPopularList({});
+
+  const flatData = data.pages.map((page) => page?.lists ?? []).flat();
+
   return (
-    <section>
-      <h2>목록</h2>
-      <p>{data.lists?.[0].title}</p>
+    <section className={s.wrapper}>
+      {flatData.map((item) => (
+        <VideoPopularListItem key={item.videoId} video={item} />
+      ))}
     </section>
   );
 };
