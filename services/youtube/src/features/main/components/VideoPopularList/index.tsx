@@ -2,7 +2,7 @@
 
 import VisibilityLoader from "@/src/shared/components/VisibilityLoader";
 import { useGetVideoPopularList } from "../../hooks/useGetVideiosPopularList";
-import * as s from "./index.css";
+import * as s from "./style.css";
 import VideoPopularListItem from "./ListItem";
 
 const VideoPopularList = () => {

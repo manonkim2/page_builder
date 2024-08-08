@@ -1,5 +1,5 @@
 import * as s from "./style.css";
-import { SCALE_COLOR } from "../../styles/constants";
+import { SCALE_COLOR } from "../../../styles/constants";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 
 interface ISpinnerProps {

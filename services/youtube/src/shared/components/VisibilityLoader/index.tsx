@@ -2,7 +2,7 @@ import {
   useIntersectionObserver,
   UseIntersectionObservertype,
 } from "../../hooks/useIntersectionObserver";
-import Spinner from "../Spinner";
+import Spinner from "../base/Spinner";
 import * as s from "./style.css";
 
 type IVisibilityLoaderProps = {
