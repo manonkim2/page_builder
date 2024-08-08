@@ -1,6 +1,6 @@
 import { StyleRule } from "@vanilla-extract/css";
 
-type gridResponsiveStyleParams = {
+type responsiveStyleParams = {
   twoXl?: StyleRule;
   xl?: StyleRule;
   lg?: StyleRule;
@@ -8,13 +8,13 @@ type gridResponsiveStyleParams = {
   sm?: StyleRule;
 };
 
-export const gridResponsiveStyle = ({
+export const responsiveStyle = ({
   twoXl = {},
   xl = {},
   lg = {},
   md = {},
   sm = {},
-}: gridResponsiveStyleParams) => ({
+}: responsiveStyleParams) => ({
   "@media": {
     "screen and (min-width: 1600px)": twoXl,
     "screen and (min-width: 1340px) and (max-width: 1599px)": xl,

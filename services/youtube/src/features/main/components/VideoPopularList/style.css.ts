@@ -1,4 +1,4 @@
-import { gridResponsiveStyle } from "@/src/shared/styles/functions/layout.css";
+import { responsiveStyle } from "@/src/shared/styles/functions/layout.css";
 import { f } from "@/src/shared/styles/functions";
 
 import { vars } from "@manon/themes";
@@ -11,7 +11,7 @@ export const wrapper = style([
     padding: "1.5rem 1rem",
     gridAutoRows: "minmax(auto)",
   },
-  gridResponsiveStyle({
+  responsiveStyle({
     twoXl: {
       gridTemplateColumns: "repeat(5, 1fr)",
     },
