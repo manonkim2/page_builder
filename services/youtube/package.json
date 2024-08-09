@@ -5,6 +5,7 @@
   "packageManager": "yarn@3.6.3",
   "scripts": {
     "dev": "next dev",
+    "dev:mocking": "NEXT_PUBLIC_MOCKING=true next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,6 +20,7 @@
     "@vanilla-extract/next-plugin": "^2.4.3",
     "@vanilla-extract/recipes": "^0.5.0",
     "googleapis": "^140.0.1",
+    "msw": "^2.3.5",
     "next": "14.2.5",
     "query-string": "^9.1.0",
     "react": "^18.3.1",
