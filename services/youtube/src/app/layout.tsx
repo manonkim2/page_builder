@@ -1,8 +1,8 @@
 import "@/src/shared/styles";
 import type { Metadata } from "next";
 import { ThemeScript } from "../shared/components/TyemeScript";
-import QueryProvider from "../shared/components/QueryProvider";
-import MSWProvider from "../shared/components/MSWProvider";
+import { QueryProvider } from "../shared/components/QueryProvider";
+import { MSWProvider } from "../shared/components/MSWProvider";
 
 export const metadata: Metadata = {
   title: "YouTube",

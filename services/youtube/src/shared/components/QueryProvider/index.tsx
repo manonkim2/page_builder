@@ -4,14 +4,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryStreamedHydration } from "@tanstack/react-query-next-experimental";
 import { ReactNode, useState } from "react";
 
-const QueryProvider = ({ children }: { children: ReactNode }) => {
+type Props = {
+  children: ReactNode;
+};
+
+export const QueryProvider = ({ children }: Props) => {
   const [queryClient] = useState(
     () =>
       new QueryClient({
         defaultOptions: {
           queries: {
-            // 1분
-            staleTime: 1000 * 60,
+            staleTime: 1000 * 60, // 1분
           },
         },
       }),
@@ -23,5 +26,3 @@ const QueryProvider = ({ children }: { children: ReactNode }) => {
     </QueryClientProvider>
   );
 };
-
-export default QueryProvider;

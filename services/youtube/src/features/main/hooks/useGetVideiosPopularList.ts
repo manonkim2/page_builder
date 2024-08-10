@@ -7,6 +7,7 @@ import {
   getVideoPopularList,
   GetVideoPopularListRequestParams,
   GetVideosPopularListResponse,
+  getVideosPopularListUrl,
 } from "../api/getVideosPopularList";
 
 type Params = Pick<GetVideoPopularListRequestParams, "maxResults"> & {
@@ -20,7 +21,7 @@ export const useGetVideoPopularList = ({
   InfiniteData<GetVideosPopularListResponse>
 > => {
   return useSuspenseInfiniteQuery({
-    queryKey: ["videoPopularList", { maxResults }],
+    queryKey: ["videos", getVideosPopularListUrl, maxResults, initPageToken],
     queryFn: async ({ pageParam = initPageToken }) => {
       return await getVideoPopularList({ maxResults, pageToken: pageParam });
     },

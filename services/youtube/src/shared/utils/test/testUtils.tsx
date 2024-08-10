@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
-import QueryProviderForTest from "../../components/QueryProvider/QueryProviderForTest";
+import { QueryProvidersForTest } from "../../components/QueryProvider/QueryProviderForTest";
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
-  return <QueryProviderForTest>{children}</QueryProviderForTest>;
+  return <QueryProvidersForTest>{children}</QueryProvidersForTest>;
 };
 
 function customRender(ui: React.ReactElement, options?: {}) {
